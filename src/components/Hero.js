@@ -1,9 +1,11 @@
 import React from "react";
 import photo from "../assets/photo.png";
 import pp from "../assets/photo.png";
+import { Layout } from "./Layout";
 
 export const Hero = () => {
   return (
+    <Layout>
     <section className="section1 grid">
       <div className="left">
         <img src={photo} width="250px" alt="" />
@@ -20,5 +22,6 @@ export const Hero = () => {
         </a>
       </div>
     </section>
+    </Layout>
   );
 };

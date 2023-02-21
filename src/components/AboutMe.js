@@ -1,9 +1,11 @@
 import React from "react";
 
 import photo from "../assets/photo.png";
+import { Layout } from "./Layout";
 
 export const AboutMe = () => {
   return (
+    <Layout>
     <section className="section5 flex">
       <h1 className="title">About me</h1>
 
@@ -36,5 +38,6 @@ export const AboutMe = () => {
         </div>
       </div>
     </section>
+    </Layout>
   );
 };

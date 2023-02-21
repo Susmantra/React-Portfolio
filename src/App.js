@@ -12,29 +12,21 @@ import { Info } from "./components/Info";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 
-const App = () => {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+export const App = () => {
   return (
     <div>
-      <div className="wrapper">
-        {/* <!-- header section --> */}
-        <Header />
-        {/* <!-- hero section --> */}
-        <Hero />
-        {/* <!-- info section --> */}
-        <Info />
-        {/* <!-- skills section --> */}
-        <Skills />
-        {/* <!-- project section --> */}
-        <Projects />
-        {/* <!-- about me section --> */}
-        <AboutMe />
-        {/* <!-- contact section --> */}
-        <Contact/>
-        {/* <!-- footer section --> */}
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
-
-export default App;
